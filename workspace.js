@@ -807,20 +807,35 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
                     else {
                         // otherwise, dynamic load
                         var that = this;
+                        // chilipeppr.load(
+                        //     "#com-chilipeppr-ws-touchplate",
+                        //     "http://fiddle.jshell.net/jarret/kvab65ot/show/light/",
+                        //     function() {
+                        //         require(["inline:com-chilipeppr-widget-touchplate"], function(touchPlate) {
+                        //             that.touchPlateInstance = touchPlate;
+                        //             console.log("touchPlate instantiated. touchPlateInstance:", that.touchPlateInstance);
+                        //             that.touchPlateInstance.init();
+                        //             //eagleInstance.activateWidget();
+                        //             if (callback) callback();
+                        //         });
+                        //     }
+                        // );
                         chilipeppr.load(
                             "#com-chilipeppr-ws-touchplate",
-                            "http://fiddle.jshell.net/jarret/kvab65ot/show/light/",
+                            "http://raw.githubusercontent.com/johnlauer/widget-grbl-touchplate/master/auto-generated-widget.html",
                             function() {
-                                require(["inline:com-chilipeppr-widget-touchplate"], function(touchPlate) {
-                                    that.touchPlateInstance = touchPlate;
-                                    console.log("touchPlate instantiated. touchPlateInstance:", that.touchPlateInstance);
-                                    that.touchPlateInstance.init();
-                                    //eagleInstance.activateWidget();
-                                    if (callback) callback();
-                                });
+                              // Callback after widget loaded into ##com-chilipeppr-ws-touchplate
+                              // Now use require.js to get reference to instantiated widget
+                              cprequire(
+                                ["inline:com-chilipeppr-widget-touchplate"], // the id you gave your widget
+                                function(myObjWidgetTouchplate) {
+                                  // Callback that is passed reference to the newly loaded widget
+                                  console.log("Widget / GRBL Touch Plate just got loaded.", myObjWidgetTouchplate);
+                                  myObjWidgetTouchplate.init();
+                                }
+                              );
                             }
-                        );
-                    }
+                          );                    }
                     $(window).trigger('resize');
                 },
                 hidetouchPlate: function() {
