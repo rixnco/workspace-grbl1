@@ -770,7 +770,7 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
             shuttlexpressObj.init();
 
 
-            console.log('WORKSPACE: loading touch plate widget');
+            console.log('WORKSPACE: RIX : loading touch plate widget');
 
             var touchPlateObj = {
                 touchPlateBtn: null,
