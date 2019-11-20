@@ -158,6 +158,8 @@ http.createServer(function(req, res) {
 
 }).listen(8888);
 
+console.log('Listenning on http://localhost:888');
+
 String.prototype.regexIndexOf = function(regex, startpos) {
   var indexOf = this.substring(startpos || 0).search(regex);
   return (indexOf >= 0) ? (indexOf + (startpos || 0)) : indexOf;
@@ -1357,7 +1359,7 @@ var getGithubUrl = function(callback) {
   var cmd = 'git config --get remote.origin.url';
 
   var stdout = childproc.execSync(cmd, { encoding: 'utf8' });
-  console.log("Got the following Github URL:", stdout);
+  //console.log("Got the following Github URL:", stdout);
 
   var re = /.*github.com:/i;
   var url = stdout.replace(re, "");
@@ -1374,7 +1376,7 @@ var getGithubUrl = function(callback) {
     rawurl: rawurl
   };
 
-  console.log("ret:", ret);
+  //console.log("ret:", ret);
   return ret;
 
 }
