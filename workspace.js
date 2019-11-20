@@ -52,8 +52,8 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
          * The ID of the widget. You must define this and make it unique.
          */
         id: "com-chilipeppr-workspace-rix", // Make the id the same as the cpdefine id
-        name: "Workspace / grbl", // The descriptive name of your widget.
-        desc: `A ChiliPeppr Workspace grbl.`,
+        name: "Workspace / Rix", // The descriptive name of your widget.
+        desc: `RIX's grbl 1.1 Workspace.`,
         url: "(auto fill by runme.js)", // The final URL of the working widget as a single HTML file with CSS and Javascript inlined. You can let runme.js auto fill this if you are using Cloud9.
         fiddleurl: "(auto fill by runme.js)", // The edit URL. This can be auto-filled by runme.js in Cloud9 if you'd like, or just define it on your own to help people know where they can edit/fork your widget
         githuburl: "(auto fill by runme.js)", // The backing github repo
@@ -249,37 +249,6 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
 
 
         loadWidgets: function(callback) {
-
-            console.log('WORKSPACE: loading widgets');
-            // Load top bar elements
-
-            // Zipwhip texting
-            // com-chilipeppr-ws-zipwhip
-            console.log('WORKSPACE: loading zipwhip');
-            chilipeppr.load(
-                "#com-chilipeppr-ws-zipwhip",
-                "http://fiddle.jshell.net/chilipeppr/56X9G/show/light/",
-                function() {
-                    require(["inline:com-chilipeppr-elem-zipwhip"], function(zipwhip) {
-                        zipwhip.init();
-                        // setup toggle button
-                        var zwBtn = $('#com-chilipeppr-ws-gcode-menu .zipwhip-button');
-                        var zwDiv = $('#com-chilipeppr-ws-zipwhip');
-                        zwBtn.click(function() {
-                            if (zwDiv.hasClass("hidden")) {
-                                // unhide
-                                zwDiv.removeClass("hidden");
-                                zwBtn.addClass("active");
-                            }
-                            else {
-                                zwDiv.addClass("hidden");
-                                zwBtn.removeClass("active");
-                            }
-                            $(window).trigger('resize');
-                        });
-                    });
-                });
-
 
             console.log('WORKSPACE: loading autolevel');
             chilipeppr.load(
