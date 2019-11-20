@@ -863,10 +863,10 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
             //This widget is locked at version 97 until upgrades can be tested with the override code.
             console.log('WORKSPACE: loading axis widget');
             chilipeppr.load(
-                "#myDivWidgetXyz",
+                "#com-chilipeppr-xyz-instance",
                 "http://raw.githubusercontent.com/chilipeppr/widget-axes/master/auto-generated-widget.html",
                 function() {
-                  // Callback after widget loaded into #myDivWidgetXyz
+                  // Callback after widget loaded into #com-chilipeppr-xyz-instance
                   // Now use require.js to get reference to instantiated widget
                   cprequire(
                     ["inline:com-chilipeppr-widget-xyz"], // the id you gave your widget
