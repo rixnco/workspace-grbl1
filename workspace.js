@@ -922,6 +922,26 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
                             var newSendDone = function(data) {
 
                             };
+
+                            var oldGotoZero = xyz.gotoZero.bind(xyz);
+                            var newGotoZero = function(evt) {
+                                console.log("gotoZero. evt.data:", evt.data, "evt:", evt);
+                                var cmd = "G0 ";
+                                if (evt.data == "xyz") {
+                                    cmd += "X0 Y0";
+                                    // if a axis showing
+                                    if (this.isAAxisShowing) {
+                                        cmd += " A0";
+                                    }
+                                } else {
+                                    cmd += evt.data.toUpperCase() + "0";
+                                }
+                                cmd += "\n";
+                                console.log(cmd);
+                                chilipeppr.publish("/com-chilipeppr-widget-serialport/send", cmd);
+
+                            };
+
                             var newJog = function(direction, isFast, is100xFast, is1000xFast, is10000xFast) {
                                 var feedrate = xyz.jogFeedRate;
                                 var val = parseFloat(xyz.accelBaseval).toFixed(3);
@@ -957,6 +977,7 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
                             xyz.jog = newJog;
                             xyz.homeAxis = newHomeAxis;
                             xyz.sendDone = newSendDone;
+                            xyz.gotoZero = newGotoZero;
                             xyz.grblVersion = '';
                             xyz.setGrblVersion = function(version) {
                                 this.grblVersion = version;
