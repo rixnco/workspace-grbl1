@@ -954,6 +954,24 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
 
                             };
 
+                            var newGotoZero= function(evt) {
+                                console.log("gotoZero. evt.data:", evt.data, "evt:", evt);
+                                var cmd = "G0 ";
+                                if (evt.data == "xyz") {
+                                    cmd += "X0 Y0";
+                                    // if a axis showing
+                                    if (this.isAAxisShowing) {
+                                        cmd += " A0";
+                                    }
+                                } else {
+                                    cmd += evt.data.toUpperCase() + "0";
+                                }
+                                cmd += "\n";
+                                console.log(cmd);
+                                chilipeppr.publish("/com-chilipeppr-widget-serialport/send", cmd);
+                        
+                            }
+
                             xyz.jog = newJog;
                             xyz.homeAxis = newHomeAxis;
                             xyz.sendDone = newSendDone;
