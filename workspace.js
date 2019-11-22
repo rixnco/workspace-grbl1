@@ -975,7 +975,7 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
 
                             };
 
-                            xyz.jog = newJog;
+                            //xyz.jog = newJog;
                             xyz.homeAxis = newHomeAxis;
                             xyz.sendDone = newSendDone;
                             xyz.gotoZero = newGotoZero;
