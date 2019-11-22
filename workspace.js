@@ -985,7 +985,7 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
                                 this.grblVersion = version;
                             };
                             xyz.isGrblV1 = function() {
-                                console.log("isGrblV1: "+version);
+                                console.log("isGrblV1: "+xyz.grblVersion);
                                 if (xyz.grblVersion.length == 0) return false;
                                 return (xyz.grblVersion.substring(0, 1) == '1');
                             };
