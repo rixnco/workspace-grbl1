@@ -624,7 +624,7 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
                         // );
                         chilipeppr.load(
                             "#com-chilipeppr-ws-touchplate",
-                            "http://raw.githubusercontent.com/johnlauer/widget-grbl-touchplate/master/auto-generated-widget.html",
+                            "http://raw.githubusercontent.com/rixnco/widget-grbl-touchplate/master/auto-generated-widget.html",
                             function() {
                               // Callback after widget loaded into ##com-chilipeppr-ws-touchplate
                               // Now use require.js to get reference to instantiated widget
