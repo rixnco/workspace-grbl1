@@ -1185,7 +1185,7 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
                     myObjWidgetXbox.init();
                     
                     // setup toggle button
-                    var zwBtn = $('#com-chilipeppr-ws-menu .xbox-button');
+                    var zwBtn = $('#com-chilipeppr-ws-gcode-menu .xbox-button');
                     var zwDiv = $('#com-chilipeppr-ws-xbox');
                     zwBtn.click(function() {
                         if (zwDiv.hasClass("hidden")) {
