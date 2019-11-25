@@ -1219,37 +1219,37 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
                             //$('.btnToggleShowWcs').hide();
                             //xyz.setupShowHideWcsBtn = function() {};
 
-                            $('#com-chilipeppr-widget-xyz-ftr .joggotozero').attr("data-content", "G0 X0 Y0 Z0<br/>If you need to go to X0 Y0 first and then Z0, you can use the menus on the axes above.");
+                            $('#com-chilipeppr-widget-xyz-ftr .joggotozero').attr("data-content", "G0 X0 Y0<br/>If you need to go to X0 Y0 first and then Z0, you can use the menus on the axes above.");
 
-                            //bind the zero out button to G92 instead of G28
-                            $('#com-chilipeppr-widget-xyz-ftr .jogzeroout').unbind("click");
-                            $('#com-chilipeppr-widget-xyz-ftr .jogzeroout').click("xyz", xyz.zeroOutAxisG92.bind(xyz));
-                            $('#com-chilipeppr-widget-xyz-ftr .jogzeroout').attr("data-content", "G92 X0 Y0 Z0 - Temporary offsets will be lost with grbl soft reset (ctrl+x) or when an M2 or M30 command is executed");
+                            // //bind the zero out button to G92 instead of G28
+                            // $('#com-chilipeppr-widget-xyz-ftr .jogzeroout').unbind("click");
+                            // $('#com-chilipeppr-widget-xyz-ftr .jogzeroout').click("xyz", xyz.zeroOutAxisG92.bind(xyz));
+                            // $('#com-chilipeppr-widget-xyz-ftr .jogzeroout').attr("data-content", "G92 X0 Y0 Z0 - Temporary offsets will be lost with grbl soft reset (ctrl+x) or when an M2 or M30 command is executed");
 
-                            //update homing pop-up
-                            $('#com-chilipeppr-widget-xyz-ftr .joghome').attr("data-content", "$H homing cycle - Must have limit switches and homing enabled in GRBL settings");
+                            // //update homing pop-up
+                            // $('#com-chilipeppr-widget-xyz-ftr .joghome').attr("data-content", "$H homing cycle - Must have limit switches and homing enabled in GRBL settings");
 
-                            //clean up drop down lists (z)
-                            $("#com-chilipeppr-widget-xyz-z .dropdown-menu li")[9].remove();
-                            $("#com-chilipeppr-widget-xyz-z .dropdown-menu li")[8].remove();
-                            $("#com-chilipeppr-widget-xyz-z .dropdown-menu li")[4].remove();
-                            $("#com-chilipeppr-widget-xyz-z .dropdown-menu li")[3].remove();
-                            $("#com-chilipeppr-widget-xyz-z .dropdown-menu li")[2].remove();
-                            //clean up drop down lists (y)
-                            $("#com-chilipeppr-widget-xyz-y .dropdown-menu li")[9].remove();
-                            $("#com-chilipeppr-widget-xyz-y .dropdown-menu li")[8].remove();
-                            $("#com-chilipeppr-widget-xyz-y .dropdown-menu li")[4].remove();
-                            $("#com-chilipeppr-widget-xyz-y .dropdown-menu li")[3].remove();
-                            $("#com-chilipeppr-widget-xyz-y .dropdown-menu li")[2].remove();
-                            //clean up drop down lists (x)
-                            $("#com-chilipeppr-widget-xyz-x .dropdown-menu li")[9].remove();
-                            $("#com-chilipeppr-widget-xyz-x .dropdown-menu li")[8].remove();
-                            $("#com-chilipeppr-widget-xyz-x .dropdown-menu li")[4].remove();
-                            $("#com-chilipeppr-widget-xyz-x .dropdown-menu li")[3].remove();
-                            $("#com-chilipeppr-widget-xyz-x .dropdown-menu li")[2].remove();
+                            // //clean up drop down lists (z)
+                            // $("#com-chilipeppr-widget-xyz-z .dropdown-menu li")[9].remove();
+                            // $("#com-chilipeppr-widget-xyz-z .dropdown-menu li")[8].remove();
+                            // $("#com-chilipeppr-widget-xyz-z .dropdown-menu li")[4].remove();
+                            // $("#com-chilipeppr-widget-xyz-z .dropdown-menu li")[3].remove();
+                            // $("#com-chilipeppr-widget-xyz-z .dropdown-menu li")[2].remove();
+                            // //clean up drop down lists (y)
+                            // $("#com-chilipeppr-widget-xyz-y .dropdown-menu li")[9].remove();
+                            // $("#com-chilipeppr-widget-xyz-y .dropdown-menu li")[8].remove();
+                            // $("#com-chilipeppr-widget-xyz-y .dropdown-menu li")[4].remove();
+                            // $("#com-chilipeppr-widget-xyz-y .dropdown-menu li")[3].remove();
+                            // $("#com-chilipeppr-widget-xyz-y .dropdown-menu li")[2].remove();
+                            // //clean up drop down lists (x)
+                            // $("#com-chilipeppr-widget-xyz-x .dropdown-menu li")[9].remove();
+                            // $("#com-chilipeppr-widget-xyz-x .dropdown-menu li")[8].remove();
+                            // $("#com-chilipeppr-widget-xyz-x .dropdown-menu li")[4].remove();
+                            // $("#com-chilipeppr-widget-xyz-x .dropdown-menu li")[3].remove();
+                            // $("#com-chilipeppr-widget-xyz-x .dropdown-menu li")[2].remove();
 
-                            //remove A axis toggle option
-                            $('#com-chilipeppr-widget-xyz .showhideaaxis').remove();
+                            // //remove A axis toggle option
+                            // $('#com-chilipeppr-widget-xyz .showhideaaxis').remove();
 
                             //Port the inches/mm code to grbl workspace - change to work with grbl
 
