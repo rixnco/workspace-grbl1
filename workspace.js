@@ -1042,8 +1042,8 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
                             chilipeppr.unsubscribe('/com-chilipeppr-widget-3dviewer/unitsChanged', xyz.updateUnitsFromStatus);
 
                             //remove wcs until it is fully baked
-                            $('.btnToggleShowWcs').hide();
-                            xyz.setupShowHideWcsBtn = function() {};
+                            //$('.btnToggleShowWcs').hide();
+                            //xyz.setupShowHideWcsBtn = function() {};
 
                             $('#com-chilipeppr-widget-xyz-ftr .joggotozero').attr("data-content", "G0 X0 Y0 Z0<br/>If you need to go to X0 Y0 first and then Z0, you can use the menus on the axes above.");
 
