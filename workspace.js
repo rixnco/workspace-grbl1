@@ -1171,10 +1171,10 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
                 
             console.log('WORKSPACE: loading joystick widget');
             chilipeppr.load(
-                "#com-chilipeppr-joystick",
+                "#com-chilipeppr-grbl-joystick",
                 "http://raw.githubusercontent.com/lunix80/grbl-joystick-widget/master/auto-generated-widget.html",
                 function() {
-                    require(["inline:com-chilipeppr-widget-macro"], function(macro) {
+                    require(["inline:com-chilipeppr-grbl-joystick"], function(macro) {
                         macro.init();
                         // setup toggle button
                         var alBtn = $('#com-chilipeppr-joystick .macro-button');
