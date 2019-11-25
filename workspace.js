@@ -1074,6 +1074,11 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
                             $("#com-chilipeppr-widget-xyz-x .dropdown-menu li")[3].remove();
                             $("#com-chilipeppr-widget-xyz-x .dropdown-menu li")[2].remove();
 
+                            // Hide touch panel
+                            $('.btnToggleShowTouchJog').hide();
+
+
+
                             // //remove A axis toggle option
                             // $('#com-chilipeppr-widget-xyz .showhideaaxis').remove();
 
