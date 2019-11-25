@@ -1344,32 +1344,39 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
 
                 
             console.log('WORKSPACE: loading joystick widget');
+            // Load XBox Controller Widget
             chilipeppr.load(
-                "#com-chilipeppr-grbl-joystick",
-                "http://raw.githubusercontent.com/lunix80/grbl-joystick-widget/master/auto-generated-widget.html",
+                "#com-chilipeppr-ws-xbox",
+                "http://raw.githubusercontent.com/chilipeppr/widget-xbox/master/auto-generated-widget.html",
                 function() {
-                    require(["inline:com-chilipeppr-grbl-joystick"], function(macro) {
-                        macro.init();
-                        // setup toggle button
-                        var alBtn = $('#com-chilipeppr-joystick .joystick-button');
-                        var alDiv = $('#com-chilipeppr-joystick');
-                        alBtn.click(function() {
-                            if (alDiv.hasClass("hidden")) {
-                                // unhide
-                                alDiv.removeClass("hidden");
-                                alBtn.addClass("active");
-                                //autolevel.onDisplay();
-                            }
-                            else {
-                                alDiv.addClass("hidden");
-                                alBtn.removeClass("active");
-                                //autolevel.onUndisplay();
-                            }
-                            $(window).trigger('resize');
-
-                        });
+                // Callback after widget loaded into #myDivWidgetXbox
+                // Now use require.js to get reference to instantiated widget
+                cprequire(
+                    ["inline:com-chilipeppr-widget-xbox"], // the id you gave your widget
+                    function(myObjWidgetXbox) {
+                    // Callback that is passed reference to the newly loaded widget
+                    console.log("Widget / Xbox just got loaded.", myObjWidgetXbox);
+                    myObjWidgetXbox.init();
+                    
+                    // setup toggle button
+                    var zwBtn = $('#com-chilipeppr-ws-menu .xbox-button');
+                    var zwDiv = $('#com-chilipeppr-ws-xbox');
+                    zwBtn.click(function() {
+                        if (zwDiv.hasClass("hidden")) {
+                            // unhide
+                            zwDiv.removeClass("hidden");
+                            zwBtn.addClass("active");
+                        }
+                        else {
+                            zwDiv.addClass("hidden");
+                            zwBtn.removeClass("active");
+                        }
+                        $(window).trigger('resize');
                     });
-                });
+                    }
+                );
+                }
+            );
     
 
 
