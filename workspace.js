@@ -1177,7 +1177,7 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
                     require(["inline:com-chilipeppr-grbl-joystick"], function(macro) {
                         macro.init();
                         // setup toggle button
-                        var alBtn = $('#com-chilipeppr-joystick .macro-button');
+                        var alBtn = $('#com-chilipeppr-joystick .joystick-button');
                         var alDiv = $('#com-chilipeppr-joystick');
                         alBtn.click(function() {
                             if (alDiv.hasClass("hidden")) {

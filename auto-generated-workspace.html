@@ -1351,7 +1351,7 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
                     require(["inline:com-chilipeppr-grbl-joystick"], function(macro) {
                         macro.init();
                         // setup toggle button
-                        var alBtn = $('#com-chilipeppr-joystick .macro-button');
+                        var alBtn = $('#com-chilipeppr-joystick .joystick-button');
                         var alDiv = $('#com-chilipeppr-joystick');
                         alBtn.click(function() {
                             if (alDiv.hasClass("hidden")) {
@@ -1597,8 +1597,8 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
                             <button type="button" class="btn btn-xs btn-default joystick-button " data-container="body" data-toggle="popover" data-placement="auto" data-content="Joystick." data-trigger="hover" data-delay="100">Joystick</button>
                             <button type="button" class="btn btn-xs btn-default autolevel-button" data-container="body" data-toggle="popover" data-placement="auto" data-content="Allows you to auto-level your PCB before milling. Most raw PCB boards have a slight warpage. This widget lets you probe the warpage and then it auto-scales your Gcode to match the warpage so you get very clean/predictable z-positions in your milling job."
                                             data-trigger="hover" data-delay="100">Auto-Level</button>
-                                            <button type="button" class="btn btn-xs btn-default macro-button " data-container="body" data-toggle="popover" data-placement="auto" data-content="Run a macro." data-trigger="hover" data-delay="100">Macro</button>
-                                            <button type="button" class="btn btn-xs btn-default eagle-button" data-container="body" data-toggle="popover" data-placement="auto" data-content="Eagle Board Import" data-trigger="hover" data-delay="100">Eagle BRD Import</button>
+                            <button type="button" class="btn btn-xs btn-default macro-button " data-container="body" data-toggle="popover" data-placement="auto" data-content="Run a macro." data-trigger="hover" data-delay="100">Macro</button>
+                            <button type="button" class="btn btn-xs btn-default eagle-button" data-container="body" data-toggle="popover" data-placement="auto" data-content="Eagle Board Import" data-trigger="hover" data-delay="100">Eagle BRD Import</button>
                             <button type="button" class="btn btn-xs btn-default touchplate-button" data-container="body" data-toggle="popover" data-placement="auto" data-content="Use a touch plate to easily figure out your Z zero of your workpiece and set it."
                                             data-trigger="hover" data-delay="100">Touch Plate</button>
                         </div>
