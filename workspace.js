@@ -1168,6 +1168,37 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
                 });
 
 
+                
+            console.log('WORKSPACE: loading joystick widget');
+            chilipeppr.load(
+                "#com-chilipeppr-joystick",
+                "http://raw.githubusercontent.com/lunix80/grbl-joystick-widget/master/auto-generated-widget.html",
+                function() {
+                    require(["inline:com-chilipeppr-widget-macro"], function(macro) {
+                        macro.init();
+                        // setup toggle button
+                        var alBtn = $('#com-chilipeppr-joystick .macro-button');
+                        var alDiv = $('#com-chilipeppr-joystick');
+                        alBtn.click(function() {
+                            if (alDiv.hasClass("hidden")) {
+                                // unhide
+                                alDiv.removeClass("hidden");
+                                alBtn.addClass("active");
+                                //autolevel.onDisplay();
+                            }
+                            else {
+                                alDiv.addClass("hidden");
+                                alBtn.removeClass("active");
+                                //autolevel.onUndisplay();
+                            }
+                            $(window).trigger('resize');
+
+                        });
+                    });
+                });
+    
+
+
             console.log('WORKSPACE: loading macros at line 1379');
             chilipeppr.load(
                 "#com-chilipeppr-ws-macro",
