@@ -1179,12 +1179,12 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
 
                             chilipeppr.unsubscribe('/com-chilipeppr-widget-3dviewer/unitsChanged', xyz.updateUnitsFromStatus);
 
-                            $('#com-chilipeppr-widget-xyz-ftr .joggotozero').attr("data-content", "G0 X0 Y0<br/>If you need to go to X0 Y0 first and then Z0, you can use the menus on the axes above.");
+                            $('#com-chilipeppr-widget-xyz-ftr .joggotozerow').attr("data-content", "G0 X0 Y0");
 
-                            //bind the zero out button to G92 instead of G28
-                            $('#com-chilipeppr-widget-xyz-ftr .jogzeroout').unbind("click");
-                            $('#com-chilipeppr-widget-xyz-ftr .jogzeroout').click("xyz", xyz.zeroOutAxisG92.bind(xyz));
-                            $('#com-chilipeppr-widget-xyz-ftr .jogzeroout').attr("data-content", "G92 X0 Y0 Z0 - Temporary offsets will be lost with grbl soft reset (ctrl+x) or when an M2 or M30 command is executed");
+                            // //bind the zero out button to G92 instead of G28
+                            // $('#com-chilipeppr-widget-xyz-ftr .jogzeroout').unbind("click");
+                            // $('#com-chilipeppr-widget-xyz-ftr .jogzeroout').click("xyz", xyz.zeroOutAxisG92.bind(xyz));
+                            // $('#com-chilipeppr-widget-xyz-ftr .jogzeroout').attr("data-content", "G92 X0 Y0 Z0 - Temporary offsets will be lost with grbl soft reset (ctrl+x) or when an M2 or M30 command is executed");
 
                             //update homing pop-up
                             $('#com-chilipeppr-widget-xyz-ftr .joghomem').attr("data-content", "$H homing cycle - Must have limit switches and homing enabled in GRBL settings");
@@ -1218,6 +1218,9 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
 
                             // Hide mDRO
                             $('.showhidemDRO').hide();               
+
+                            // Hide A axis toggle
+                            $('.showhideaaxis').hide();               
 
 
                             // //remove A axis toggle option
