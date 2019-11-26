@@ -1029,33 +1029,33 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
                             console.error("WORKSPACE: configure axes menu: "+lis);
 
 
-                            $("#com-chilipeppr-widget-xyz-z .dropdown-menu li")[7].remove();
-                            $("#com-chilipeppr-widget-xyz-z .dropdown-menu li")[8].remove();
-                            $("#com-chilipeppr-widget-xyz-z .dropdown-menu li")[9].remove();
-                            $("#com-chilipeppr-widget-xyz-z .dropdown-menu li")[10].remove();
                             $("#com-chilipeppr-widget-xyz-z .dropdown-menu li")[11].remove();
+                            $("#com-chilipeppr-widget-xyz-z .dropdown-menu li")[10].remove();
+                            $("#com-chilipeppr-widget-xyz-z .dropdown-menu li")[9].remove();
+                            $("#com-chilipeppr-widget-xyz-z .dropdown-menu li")[8].remove();
+                            $("#com-chilipeppr-widget-xyz-z .dropdown-menu li")[7].remove();
                             //clean up drop down lists (y)
-                            $("#com-chilipeppr-widget-xyz-y .dropdown-menu li")[7].remove();
-                            $("#com-chilipeppr-widget-xyz-y .dropdown-menu li")[8].remove();
-                            $("#com-chilipeppr-widget-xyz-y .dropdown-menu li")[9].remove();
-                            $("#com-chilipeppr-widget-xyz-y .dropdown-menu li")[10].remove();
                             $("#com-chilipeppr-widget-xyz-y .dropdown-menu li")[11].remove();
+                            $("#com-chilipeppr-widget-xyz-y .dropdown-menu li")[10].remove();
+                            $("#com-chilipeppr-widget-xyz-y .dropdown-menu li")[9].remove();
+                            $("#com-chilipeppr-widget-xyz-y .dropdown-menu li")[8].remove();
+                            $("#com-chilipeppr-widget-xyz-y .dropdown-menu li")[7].remove();
                             //clean up drop down lists (x)
-                            $("#com-chilipeppr-widget-xyz-x .dropdown-menu li")[7].remove();
-                            $("#com-chilipeppr-widget-xyz-x .dropdown-menu li")[8].remove();
-                            $("#com-chilipeppr-widget-xyz-x .dropdown-menu li")[9].remove();
-                            $("#com-chilipeppr-widget-xyz-x .dropdown-menu li")[10].remove();
                             $("#com-chilipeppr-widget-xyz-x .dropdown-menu li")[11].remove();
+                            $("#com-chilipeppr-widget-xyz-x .dropdown-menu li")[10].remove();
+                            $("#com-chilipeppr-widget-xyz-x .dropdown-menu li")[9].remove();
+                            $("#com-chilipeppr-widget-xyz-x .dropdown-menu li")[8].remove();
+                            $("#com-chilipeppr-widget-xyz-x .dropdown-menu li")[7].remove();
 
 
                             // Hide touch panel
-                            $('.btnToggleShowTouchJog').hide();
+                            //$('.btnToggleShowTouchJog').hide();
 
                             // Hide mDRO
-                            $('.showhidemDRO').hide();               
+                            $('#com-chilipeppr-widget-xyz .showhidemDRO').hide();               
 
                             // Hide A axis toggle
-                            $('.showhideaaxis').hide();               
+                            $('#com-chilipeppr-widget-xyz .showhideaaxis').hide();               
 
 
                             // //remove A axis toggle option
