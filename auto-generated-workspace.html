@@ -247,6 +247,9 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
          * and inits them.
          */
         init: function() {
+
+            console.group('Initializing workspace');
+
             /*
             // Most workspaces will instantiate the Serial Port JSON Server widget
             this.loadSpjsWidget();
@@ -1197,7 +1200,7 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
                             // //clean up drop down lists (z)
                             
                             var lis= $("#com-chilipeppr-widget-xyz-z .dropdown-menu li");
-                            console.log("WORKSPACE: configure axes menu: "+lis);
+                            console.error("WORKSPACE: configure axes menu: "+lis);
 
 
                             $("#com-chilipeppr-widget-xyz-z .dropdown-menu li")[7].remove();
