@@ -609,19 +609,6 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
                     else {
                         // otherwise, dynamic load
                         var that = this;
-                        // chilipeppr.load(
-                        //     "#com-chilipeppr-ws-touchplate",
-                        //     "http://fiddle.jshell.net/jarret/kvab65ot/show/light/",
-                        //     function() {
-                        //         require(["inline:com-chilipeppr-widget-touchplate"], function(touchPlate) {
-                        //             that.touchPlateInstance = touchPlate;
-                        //             console.log("touchPlate instantiated. touchPlateInstance:", that.touchPlateInstance);
-                        //             that.touchPlateInstance.init();
-                        //             //eagleInstance.activateWidget();
-                        //             if (callback) callback();
-                        //         });
-                        //     }
-                        // );
                         chilipeppr.load(
                             "#com-chilipeppr-ws-touchplate",
                             "http://raw.githubusercontent.com/rixnco/widget-grbl-touchplate/master/auto-generated-widget.html",
@@ -694,29 +681,6 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
                 "#com-chilipeppr-ws-gcode-menu-billboard",
                 "http://raw.githubusercontent.com/chilipeppr/widget-pubsubviewer/master/auto-generated-widget.html");
 
-            //Unsure what the purpose of this is; loading the wrong widgets. 
-            // MODIFY
-            // This is a fiddle that looks at the Grbl workspace being instantiated
-            // here and attaches 3 menu items. 1) the pubsub viewer dialog so users
-            // can see what pubsubs this workspace may publish or subscribe to 2) It
-            // lets them fork the workspace for their own use
-            /*
-            chilipeppr.load(
-                "http://fiddle.jshell.net/chilipeppr/zMbL9/show/light/",
-
-                function() {
-                    require(['inline:com-chilipeppr-elem-pubsubviewer'], function(pubsubviewer) {
-                        // you are asking the pubsubviewer to show its menu
-                        // inside the dom element in the 1st param, in the 2nd
-                        // param you are giving it which object to analyze to gather
-                        // its data, the 3rd param is just a name
-                        pubsubviewer.attachTo(
-                            $('#com-chilipeppr-ws-gcode-menu .dropdown-menu-ws'),
-                            ws,
-                            "Workspace");
-                    });
-                });
-                */
 
             // 3D Viewer
             // http://jsfiddle.net/chilipeppr/y3HRF
@@ -1178,7 +1142,7 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
             // Load XBox Controller Widget
             chilipeppr.load(
                 "#com-chilipeppr-ws-xbox",
-                "http://raw.githubusercontent.com/chilipeppr/widget-xbox/master/auto-generated-widget.html",
+                "http://raw.githubusercontent.com/rixnco/widget-gamepad/master/auto-generated-widget.html",
                 function() {
                 // Callback after widget loaded into #myDivWidgetXbox
                 // Now use require.js to get reference to instantiated widget
