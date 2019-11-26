@@ -1573,34 +1573,36 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
                             <div class="dropdown pull-left">
                                 <button class="btn btn-xs btn-default dropdown-toggle" type="button" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">Widgets<span class="caret"></span></button>
                                 <ul class="dropdown-menu workspace-dropdown " aria-labelledby="dropdownMenu1" style="z-index:1000;">
+                                    <li><button type="button" class="btn-ws btn btn-xs btn-default touchplate-button" data-container="body" data-toggle="popover" data-placement="auto" data-content="Use a touch plate to easily figure out your Z zero of your workpiece and set it."
+                                        data-trigger="hover" data-delay="100">Touch Plate</button></li>
                                     <li><button type="button" class="btn-ws btn btn-xs btn-default autolevel-button" data-container="body" data-toggle="popover" data-placement="auto" data-content="Allows you to auto-level your PCB before milling. Most raw PCB boards have a slight warpage. This widget lets you probe the warpage and then it auto-scales your Gcode to match the warpage so you get very clean/predictable z-positions in your milling job."
                                             data-trigger="hover" data-delay="100">Auto-Level</button></li>
-                                    <li><button type="button" class="btn-ws btn btn-xs btn-default macro-button " data-container="body" data-toggle="popover" data-placement="auto" data-content="Run a macro." data-trigger="hover" data-delay="100">Macro</button></li>
-                                    <li><button type="button" class="btn-ws btn btn-xs btn-default eagle-button" data-container="body" data-toggle="popover" data-placement="auto" data-content="Eagle Board Import" data-trigger="hover" data-delay="100">Eagle BRD Import</button></li>
-                                    <li><button type="button" class="btn-ws btn btn-xs btn-default touchplate-button" data-container="body" data-toggle="popover" data-placement="auto" data-content="Use a touch plate to easily figure out your Z zero of your workpiece and set it."
-                                            data-trigger="hover" data-delay="100">Touch Plate</button></li>
-                                    <li><button type="button" class="btn-ws btn btn-xs btn-default xbox-button" data-container="body" data-toggle="popover" data-placement="auto" data-content="Use your Xbox Controller with ChiliPeppr." data-trigger="hover" data-delay="100">
-                                                Xbox Controller</button></li>
+                                    <li><button type="button" class="btn-ws btn btn-xs btn-default eagle-button" data-container="body" data-toggle="popover" data-placement="auto" data-content="Eagle Board Import" 
+                                        data-trigger="hover" data-delay="100">Eagle BRD Import</button></li>
+                                    <li><button type="button" class="btn-ws btn btn-xs btn-default xbox-button" data-container="body" data-toggle="popover" data-placement="auto" data-content="Use your Gamepad Controller with ChiliPeppr." 
+                                        data-trigger="hover" data-delay="100">Gamepad Controller</button></li>
+                                    <li><button type="button" class="btn-ws btn btn-xs btn-default macro-button " data-container="body" data-toggle="popover" data-placement="auto" data-content="Run a macro." 
+                                        data-trigger="hover" data-delay="100">Macro</button></li>
                                 </ul>
                             </div>
 
 
 
-                            <button type="button" class="btn btn-xs btn-default xbox-button" data-container="body" data-toggle="popover" data-placement="auto" data-content="Use your Xbox Controller with ChiliPeppr." data-trigger="hover" data-delay="100">
+                            <!-- <button type="button" class="btn btn-xs btn-default xbox-button" data-container="body" data-toggle="popover" data-placement="auto" data-content="Use your Xbox Controller with ChiliPeppr." data-trigger="hover" data-delay="100">
                                 Xbox Controller</button>
                             <button type="button" class="btn btn-xs btn-default autolevel-button" data-container="body" data-toggle="popover" data-placement="auto" data-content="Allows you to auto-level your PCB before milling. Most raw PCB boards have a slight warpage. This widget lets you probe the warpage and then it auto-scales your Gcode to match the warpage so you get very clean/predictable z-positions in your milling job."
                                             data-trigger="hover" data-delay="100">Auto-Level</button>
                             <button type="button" class="btn btn-xs btn-default macro-button " data-container="body" data-toggle="popover" data-placement="auto" data-content="Run a macro." data-trigger="hover" data-delay="100">Macro</button>
                             <button type="button" class="btn btn-xs btn-default eagle-button" data-container="body" data-toggle="popover" data-placement="auto" data-content="Eagle Board Import" data-trigger="hover" data-delay="100">Eagle BRD Import</button>
                             <button type="button" class="btn btn-xs btn-default touchplate-button" data-container="body" data-toggle="popover" data-placement="auto" data-content="Use a touch plate to easily figure out your Z zero of your workpiece and set it."
-                                            data-trigger="hover" data-delay="100">Touch Plate</button>
+                                            data-trigger="hover" data-delay="100">Touch Plate</button> -->
                         </div>
                     </div>
-                    <div class="zhigh hidden" id="com-chilipeppr-ws-xbox">XBox Here</div>
-                    <div class="zhigh hidden" id="com-chilipeppr-ws-autolevel">Auto-Level Here</div>
-                    <div class="zhigh hidden" id="com-chilipeppr-ws-macro">Macro Here</div>
-                    <div class="zhigh hidden" id="com-chilipeppr-ws-eagle">Eagle BRD Here</div>
                     <div class="zhigh hidden" id="com-chilipeppr-ws-touchplate">Touch Plate Here</div>
+                    <div class="zhigh hidden" id="com-chilipeppr-ws-autolevel">Auto-Level Here</div>
+                    <div class="zhigh hidden" id="com-chilipeppr-ws-eagle">Eagle BRD Here</div>
+                    <div class="zhigh hidden" id="com-chilipeppr-ws-macro">Macro Here</div>
+                    <div class="zhigh hidden" id="com-chilipeppr-ws-xbox">XBox Here</div>
                     <div id="com-chilipeppr-gcode-list" class="zhigh">Load Gcode List Here</div>
                     <div id="com-chilipeppr-serialport-log" class="zhigh">Load Serial Port Log Here</div>
 
