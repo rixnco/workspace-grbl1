@@ -1021,6 +1021,11 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
                             
 
                             // //clean up drop down lists (z)
+                            
+                            var lis= $("#com-chilipeppr-widget-xyz-z .dropdown-menu li");
+                            console.log("WORKSPACE: configure axes menu: "+lis);
+
+
                             $("#com-chilipeppr-widget-xyz-z .dropdown-menu li")[7].remove();
                             $("#com-chilipeppr-widget-xyz-z .dropdown-menu li")[8].remove();
                             $("#com-chilipeppr-widget-xyz-z .dropdown-menu li")[9].remove();
@@ -1039,7 +1044,7 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
                             $("#com-chilipeppr-widget-xyz-x .dropdown-menu li")[10].remove();
                             $("#com-chilipeppr-widget-xyz-x .dropdown-menu li")[11].remove();
 
-                            
+
                             // Hide touch panel
                             $('.btnToggleShowTouchJog').hide();
 
