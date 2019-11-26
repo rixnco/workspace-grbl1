@@ -14,9 +14,9 @@ not conflict with other ChiliPeppr objects.
 | ID                    | com-chilipeppr-workspace-rix |
 | Name                  | Workspace / Rix |
 | Description           | RIX's grbl 1.1 Workspace. |
-| chilipeppr.load() URL | http://raw.githubusercontent.com/rixnco/workspace-rix/master/auto-generated-workspace.html |
+| chilipeppr.load() URL | http://raw.githubusercontent.com/https://master/auto-generated-workspace.html |
 | Edit URL              | http://ide.c9.io/undefined/undefined |
-| Github URL            | http://github.com/rixnco/workspace-rix |
+| Github URL            | http://github.com/https:/ |
 | Test URL              | https://preview.c9users.io/undefined/undefined/workspace.html |
 
 ## Example Code for chilipeppr.load() Statement
@@ -34,7 +34,7 @@ back the instance of it to init() it.
 // this workspace should be loaded into.
 chilipeppr.load(
   "#pnlWorkspace",
-  "http://raw.githubusercontent.com/rixnco/workspace-rix/master/auto-generated-workspace.html",
+  "http://raw.githubusercontent.com/https://master/auto-generated-workspace.html",
   function() {
     // Callback after workspace loaded into #pnlWorkspace
     // Now use require.js to get reference to instantiated workspace
@@ -135,15 +135,15 @@ The table below shows, in order, the methods and properties inside the workspace
           </tr>
       </thead>
       <tbody>
-      <tr valign="top"><td>id</td><td>string</td><td>"com-chilipeppr-workspace-rix"<br><br>The ID of the widget. You must define this and make it unique.</td></tr><tr valign="top"><td>name</td><td>string</td><td>"Workspace / Rix"</td></tr><tr valign="top"><td>desc</td><td>string</td><td>"RIX's grbl 1.1 Workspace."</td></tr><tr valign="top"><td>url</td><td>string</td><td>"http://raw.githubusercontent.com/rixnco/workspace-rix/master/auto-generated-workspace.html"</td></tr><tr valign="top"><td>fiddleurl</td><td>string</td><td>"http://ide.c9.io/undefined/undefined"</td></tr><tr valign="top"><td>githuburl</td><td>string</td><td>"http://github.com/rixnco/workspace-rix"</td></tr><tr valign="top"><td>testurl</td><td>string</td><td>"http://undefined-undefined.c9users.io/workspace.html"</td></tr><tr valign="top"><td>widgetConsole</td><td>object</td><td>Contains reference to the Console widget object. Hang onto the reference
+      <tr valign="top"><td>id</td><td>string</td><td>"com-chilipeppr-workspace-rix"<br><br>The ID of the widget. You must define this and make it unique.</td></tr><tr valign="top"><td>name</td><td>string</td><td>"Workspace / Rix"</td></tr><tr valign="top"><td>desc</td><td>string</td><td>"RIX's grbl 1.1 Workspace."</td></tr><tr valign="top"><td>url</td><td>string</td><td>"http://raw.githubusercontent.com/https://master/auto-generated-workspace.html"</td></tr><tr valign="top"><td>fiddleurl</td><td>string</td><td>"http://ide.c9.io/undefined/undefined"</td></tr><tr valign="top"><td>githuburl</td><td>string</td><td>"http://github.com/https:/"</td></tr><tr valign="top"><td>testurl</td><td>string</td><td>"http://undefined-undefined.c9users.io/workspace.html"</td></tr><tr valign="top"><td>widgetConsole</td><td>object</td><td>Contains reference to the Console widget object. Hang onto the reference
 so we can resize it when the window resizes because we want it to manually
-resize to fill the height of the browser so it looks clean.</td></tr><tr valign="top"><td>init</td><td>function</td><td>function () <br><br>The workspace's init method. It loads the all the widgets contained in the workspace
-and inits them.</td></tr><tr valign="top"><td>getBillboard</td><td>function</td><td>function () <br><br>Returns the billboard HTML, CSS, and Javascript for this Workspace. The billboard
+resize to fill the height of the browser so it looks clean.</td></tr><tr valign="top"><td>init</td><td>function</td><td>function () <br><br>The workspace's init method. It loads the all the widgets contained in the workspace
+and inits them.</td></tr><tr valign="top"><td>getBillboard</td><td>function</td><td>function () <br><br>Returns the billboard HTML, CSS, and Javascript for this Workspace. The billboard
 is used by the home page, the workspace picker, and the fork pulldown to show a
-consistent name/image/description tag for the workspace throughout the ChiliPeppr ecosystem.</td></tr><tr valign="top"><td>addBillboardToWorkspaceMenu</td><td>function</td><td>function () <br><br>Inject the billboard into the Workspace upper right corner pulldown which
-follows the standard template for workspace pulldown menus.</td></tr><tr valign="top"><td>setupResize</td><td>function</td><td>function () <br><br>Listen to window resize event.</td></tr><tr valign="top"><td>onResize</td><td>function</td><td>function () <br><br>When browser window resizes, forcibly resize the Console window</td></tr><tr valign="top"><td>loadTemplateWidget</td><td>function</td><td>function (callback) <br><br>Load the Template widget via chilipeppr.load() so folks have a sample
-widget they can fork as a starting point for their own.</td></tr><tr valign="top"><td>loadSpjsWidget</td><td>function</td><td>function (callback) <br><br>Load the Serial Port JSON Server widget via chilipeppr.load()</td></tr><tr valign="top"><td>loadConsoleWidget</td><td>function</td><td>function (callback) <br><br>Load the Console widget via chilipeppr.load()</td></tr><tr valign="top"><td>loadWorkspaceMenu</td><td>function</td><td>function (callback) <br><br>Load the workspace menu and show the pubsubviewer and fork links using
-our pubsubviewer widget that makes those links for us.</td></tr><tr valign="top"><td>loadWidgets</td><td>function</td><td>function (callback) </td></tr>
+consistent name/image/description tag for the workspace throughout the ChiliPeppr ecosystem.</td></tr><tr valign="top"><td>addBillboardToWorkspaceMenu</td><td>function</td><td>function () <br><br>Inject the billboard into the Workspace upper right corner pulldown which
+follows the standard template for workspace pulldown menus.</td></tr><tr valign="top"><td>setupResize</td><td>function</td><td>function () <br><br>Listen to window resize event.</td></tr><tr valign="top"><td>onResize</td><td>function</td><td>function () <br><br>When browser window resizes, forcibly resize the Console window</td></tr><tr valign="top"><td>loadTemplateWidget</td><td>function</td><td>function (callback) <br><br>Load the Template widget via chilipeppr.load() so folks have a sample
+widget they can fork as a starting point for their own.</td></tr><tr valign="top"><td>loadSpjsWidget</td><td>function</td><td>function (callback) <br><br>Load the Serial Port JSON Server widget via chilipeppr.load()</td></tr><tr valign="top"><td>loadConsoleWidget</td><td>function</td><td>function (callback) <br><br>Load the Console widget via chilipeppr.load()</td></tr><tr valign="top"><td>loadWorkspaceMenu</td><td>function</td><td>function (callback) <br><br>Load the workspace menu and show the pubsubviewer and fork links using
+our pubsubviewer widget that makes those links for us.</td></tr><tr valign="top"><td>loadWidgets</td><td>function</td><td>function (callback) </td></tr>
       </tbody>
   </table>
 
