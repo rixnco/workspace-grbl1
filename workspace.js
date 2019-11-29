@@ -25,9 +25,9 @@ cprequire_test(["inline:com-chilipeppr-workspace-rix"], function(ws) {
         chilipeppr.load("#com-chilipeppr-widget-flash-instance",
             "http://raw.githubusercontent.com/rixnco/element-flash/master/auto-generated-widget.html",
             function() {
-                console.error("mycallback got called after loading flash msg module");
+                // console.log("mycallback got called after loading flash msg module");
                 cprequire(["inline:com-chilipeppr-elem-flashmsg"], function(fm) {
-                    console.error("inside require of " + fm.id);
+//                    console.error("inside require of " + fm.id);
                     fm.init();
                 });
             }
@@ -931,7 +931,6 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
                             // //clean up drop down lists (z)
                             
                             var lis= $("#com-chilipeppr-widget-xyz-z .dropdown-menu li");
-                            console.error("WORKSPACE: configure axes menu: "+lis);
 
 
                             $("#com-chilipeppr-widget-xyz-z .dropdown-menu li")[11].remove();
