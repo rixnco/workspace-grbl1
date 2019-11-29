@@ -792,10 +792,10 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
                                 chilipeppr.publish("/com-chilipeppr-widget-serialport/send", cmd);
 
                             };
-                            var oldSendDone = xyz.sendDone.bind(xyz);
-                            var newSendDone = function(data) {
+                            // var oldSendDone = xyz.sendDone.bind(xyz);
+                            // var newSendDone = function(data) {
 
-                            };
+                            // };
 
                             var oldGotoZero = xyz.gotoZero.bind(xyz);
                             var newGotoZero = function(evt) {
