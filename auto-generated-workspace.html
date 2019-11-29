@@ -202,9 +202,9 @@ cprequire_test(["inline:com-chilipeppr-workspace-rix"], function(ws) {
         chilipeppr.load("#com-chilipeppr-widget-flash-instance",
             "http://raw.githubusercontent.com/rixnco/element-flash/master/auto-generated-widget.html",
             function() {
-                console.log("mycallback got called after loading flash msg module");
+                console.error("mycallback got called after loading flash msg module");
                 cprequire(["inline:com-chilipeppr-elem-flashmsg"], function(fm) {
-                    //console.log("inside require of " + fm.id);
+                    console.error("inside require of " + fm.id);
                     fm.init();
                 });
             }
@@ -333,7 +333,7 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
 
             chilipeppr.load(
                 "#com-chilipeppr-widget-serialport-instance",
-                "..//widget-spjs/master/auto-generated-widget.html",
+                "http://raw.githubusercontent.com/rixnco/widget-spjs/master/auto-generated-widget.html ",
                 function() {
                     console.log("mycallback got called after loading spjs module");
                     cprequire(["inline:com-chilipeppr-widget-serialport"], function(spjs) {
@@ -1272,7 +1272,7 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
     
 
 
-            console.log('WORKSPACE: loading macros at line 1379');
+            console.log('WORKSPACE: loading macros widget');
             chilipeppr.load(
                 "#com-chilipeppr-ws-macro",
                 "https://raw.githubusercontent.com/rixnco/widget-macro/master/auto-generated-widget.html",
