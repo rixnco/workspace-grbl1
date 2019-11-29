@@ -1207,7 +1207,7 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
             // }
             chilipeppr.load(
                 "#com-chilipeppr-widget-grbl-instance",
-                "https://raw.githubusercontent.com/rixnco/grbl1-widget/master/auto-generated-widget.html",
+                "https://raw.githubusercontent.com/rixnco/widget-grbl1/master/auto-generated-widget.html",
                 function() {
                     cprequire(
                         ["inline:com-chilipeppr-widget-grbl"], 
