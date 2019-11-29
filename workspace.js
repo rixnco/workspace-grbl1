@@ -98,8 +98,6 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
             */
             this.loadWidgets();
 
-            //this.loadTemplateWidget();
-
             // Create our workspace upper right corner triangle menu
             this.loadWorkspaceMenu();
             // Add our billboard to the menu (has name, url, picture of workspace)
@@ -148,29 +146,6 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
          */
         onResize: function() {
             if (this.widgetConsole) this.widgetConsole.resize();
-        },
-        /**
-         * Load the Template widget via chilipeppr.load() so folks have a sample
-         * widget they can fork as a starting point for their own.
-         */
-        loadTemplateWidget: function(callback) {
-
-            chilipeppr.load(
-                "#com-chilipeppr-widget-template-instance",
-                "..//widget-template/master/auto-generated-widget.html",
-                function() {
-                    // Callback after widget loaded into #myDivWidgetTemplate
-                    // Now use require.js to get reference to instantiated widget
-                    cprequire(
-                        ["inline:com-chilipeppr-widget-template"], // the id you gave your widget
-                        function(myObjWidgetTemplate) {
-                            // Callback that is passed reference to the newly loaded widget
-                            console.log("Widget / Template just got loaded.", myObjWidgetTemplate);
-                            myObjWidgetTemplate.init();
-                        }
-                    );
-                }
-            );
         },
         /**
          * Load the Serial Port JSON Server widget via chilipeppr.load()
@@ -268,7 +243,7 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
             console.log('WORKSPACE: loading autolevel');
             chilipeppr.load(
                 "#com-chilipeppr-ws-autolevel",
-                "../widget-grbl-autolevel/master/auto-generated-widget.html",
+                "https://raw.githubusercontent.com/rixnco/widget-grbl-autolevel/master/auto-generated-widget.html",
                 function() {
                     require(["inline:com-chilipeppr-widget-autolevel"],
 
@@ -293,34 +268,13 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
                             });
                         });
                 });
-            /*
-            // Inject new div to contain widget or use an existing div with an ID
-            $("body").append('<' + 'div id="myDivWidgetAutolevel"><' + '/div>');
-
-            chilipeppr.load(
-                "#myDivWidgetAutolevel",
-                "../grbl-widget-autolevel/master/auto-generated-widget.html",
-                function() {
-                    // Callback after widget loaded into #myDivWidgetAutolevel
-                    // Now use require.js to get reference to instantiated widget
-                    cprequire(
-                        ["inline:com-chilipeppr-widget-autolevel"], // the id you gave your widget
-                        function(myObjWidgetAutolevel) {
-                            // Callback that is passed reference to the newly loaded widget
-                            console.log("Widget / Auto-Level just got loaded.", myObjWidgetAutolevel);
-                            myObjWidgetAutolevel.init();
-                        }
-                    );
-                }
-            );*/
-
 
             // Macro
             // com-chilipeppr-ws-macro
             console.log('WORKSPACE: loading macro');
             chilipeppr.load(
                 "#com-chilipeppr-ws-macro",
-                "..//widget-macro/master/auto-generated-widget.html",
+                "https://raw.githubusercontent.com/rixnco/widget-macro/master/auto-generated-widget.html",
                 function() {
                     //"http://fiddle.jshell.net/chilipeppr/ZJ5vV/show/light/", function () {
                     cprequire(["inline:com-chilipeppr-widget-macro"], function(macro) {
@@ -346,67 +300,6 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
                     });
                 }); //End Macro
 
-
-            /*
-            // Macro (original)
-            // com-chilipeppr-ws-autolevel
-            chilipeppr.load(
-                "#com-chilipeppr-ws-macro",
-                "http://fiddle.jshell.net/chilipeppr/ZJ5vV/show/light/",
-                function() {
-                    require(["inline:com-chilipeppr-widget-macro"], function(macro) {
-                        macro.init();
-                        // setup toggle button
-                        var alBtn = $('#com-chilipeppr-ws-gcode-menu .macro-button');
-                        var alDiv = $('#com-chilipeppr-ws-macro');
-                        alBtn.click(function() {
-                            if (alDiv.hasClass("hidden")) {
-                                // unhide
-                                alDiv.removeClass("hidden");
-                                alBtn.addClass("active");
-                                //autolevel.onDisplay();
-                            }
-                            else {
-                                alDiv.addClass("hidden");
-                                alBtn.removeClass("active");
-                                //autolevel.onUndisplay();
-                            }
-                            $(window).trigger('resize');
-
-                        });
-                    });
-                });
-                */
-
-            /*
-            // Macro (imania)
-            // com-chilipeppr-ws-autolevel
-            chilipeppr.load(
-                "#com-chilipeppr-ws-macro",
-                "http://jsfiddle.net/forstuvning/3gmfmnna/8/show/light/",
-                function() {
-                    require(["inline:com-chilipeppr-widget-macro"], function(macro) {
-                        macro.init();
-                        // setup toggle button
-                        var alBtn = $('#com-chilipeppr-ws-gcode-menu .macro-button');
-                        var alDiv = $('#com-chilipeppr-ws-macro');
-                        alBtn.click(function() {
-                            if (alDiv.hasClass("hidden")) {
-                                // unhide
-                                alDiv.removeClass("hidden");
-                                alBtn.addClass("active");
-                                //autolevel.onDisplay();
-                            }
-                            else {
-                                alDiv.addClass("hidden");
-                                alBtn.removeClass("active");
-                                //autolevel.onUndisplay();
-                            }
-                            $(window).trigger('resize');
-
-                        });
-                    });
-                });*/
 
             // Eagle BRD Import
             // com-chilipeppr-widget-eagle
@@ -452,7 +345,7 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
                         var that = this;
                         chilipeppr.load(
                             "#com-chilipeppr-ws-eagle",
-                            "..//widget-eagle/master/auto-generated-widget.html",
+                            "https://raw.githubusercontent.com/rixnco/widget-eagle/master/auto-generated-widget.html",
                             function() {
                                 require(["inline:com-chilipeppr-widget-eagle"], function(eagle) {
                                     that.eagleInstance = eagle;
@@ -626,7 +519,7 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
                         var that = this;
                         chilipeppr.load(
                             "#com-chilipeppr-ws-touchplate",
-                            "../widget-grbl-touchplate/master/auto-generated-widget.html",
+                            "https://raw.githubusercontent.com/rixnco/widget-grbl-touchplate/master/auto-generated-widget.html",
                             function() {
                               // Callback after widget loaded into ##com-chilipeppr-ws-touchplate
                               // Now use require.js to get reference to instantiated widget
@@ -661,7 +554,7 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
             console.log('WORKSPACE: loading drag drop widget');
 
             chilipeppr.load("#com-chilipeppr-ws-gcode-dragdrop",
-                "..//elem-dragdrop/master/auto-generated-widget.html",
+                "https://raw.githubusercontent.com/rixnco/elem-dragdrop/master/auto-generated-widget.html",
                 function() {
                     require(["inline:com-chilipeppr-elem-dragdrop"], function(dd) {
                         console.log("inside require of dragdrop");
@@ -688,13 +581,13 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
                     });
                 });
 
-            // Workspace Menu with Workspace Billboard
-            // http://jsfiddle.net/jlauer/yC8Hv/
+            // // Workspace Menu with Workspace Billboard
+            // // http://jsfiddle.net/jlauer/yC8Hv/
 
-            console.log('WORKSPACE: loading billboard');
-            chilipeppr.load(
-                "#com-chilipeppr-ws-gcode-menu-billboard",
-                "..//widget-pubsubviewer/master/auto-generated-widget.html");
+            // console.log('WORKSPACE: loading billboard');
+            // chilipeppr.load(
+            //     "#com-chilipeppr-ws-gcode-menu-billboard",
+            //     "..//widget-pubsubviewer/master/auto-generated-widget.html");
 
 
             // 3D Viewer
@@ -702,7 +595,7 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
             console.log('WORKSPACE: loading 3d viewer');
             chilipeppr.load("#com-chilipeppr-3dviewer",
                 //"http://fiddle.jshell.net/chilipeppr/y3HRF/show/light/",
-                "..//widget-3dviewer/master/auto-generated-widget.html",
+                "https://raw.githubusercontent.com/rixnco/widget-3dviewer/master/auto-generated-widget.html",
 
                 function() {
                     console.log("got callback done loading 3d");
@@ -823,7 +716,7 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
             // http://jsfiddle.net/chilipeppr/a4g5ds5n/
             console.log('WORKSPACE: loading gcode list');
             chilipeppr.load("#com-chilipeppr-gcode-list",
-                "../widget-gcodelist-jpaFork/master/auto-generated-widget.html",
+                "https://raw.githubusercontent.com/rixnco/widget-gcodelist/master/auto-generated-widget.html",
                 //"http://fiddle.jshell.net/chilipeppr/a4g5ds5n/show/light/",
                 //"http://jsfiddle.net/jarret/0a53jy0x/show/light",
 
@@ -882,7 +775,7 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
                 //          "http://fiddle.jshell.net/chilipeppr/gh45j/97/show/light/",
                 //"../-grbl/widget-grbl-xyz/master/auto-generated-widget.html",
                 //"../widget-grbl-xyz/master/auto-generated-widget.html",
-                "../widget-axes/master/auto-generated-widget.html",
+                "https://raw.githubusercontent.com/rixnco/widget-axes/master/auto-generated-widget.html",
 
 
                 function() {
@@ -1169,7 +1062,7 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
             // Load XBox Controller Widget
             chilipeppr.load(
                 "#com-chilipeppr-ws-xbox",
-                "../widget-gamepad/master/auto-generated-widget.html",
+                "https://raw.githubusercontent.com/rixnco/widget-gamepad/master/auto-generated-widget.html",
                 function() {
                 // Callback after widget loaded into #myDivWidgetXbox
                 // Now use require.js to get reference to instantiated widget
@@ -1205,7 +1098,7 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
             console.log('WORKSPACE: loading macros at line 1379');
             chilipeppr.load(
                 "#com-chilipeppr-ws-macro",
-                "..//widget-macro/master/auto-generated-widget.html",
+                "https://raw.githubusercontent.com/rixnco/widget-macro/master/auto-generated-widget.html",
                 function() {
                     require(["inline:com-chilipeppr-widget-macro"], function(macro) {
                         macro.init();
@@ -1232,13 +1125,9 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
 
 
             // Serial Port Log Window
-            // http://jsfiddle.net/chilipeppr/rczajbx0/
             console.log('WORKSPACE: loading serial port log');
             chilipeppr.load("#com-chilipeppr-serialport-log",
-                "..//widget-console/master/auto-generated-widget.html",
-
-
-                // "http://fiddle.jshell.net/chilipeppr/rczajbx0/show/light/",
+                "https://raw.githubusercontent.com/rixnco/widget-console/master/auto-generated-widget.html",
 
                 function() {
                     cprequire(
@@ -1294,72 +1183,50 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
             // com-chilipeppr-grbl
 
             console.log('WORKSPACE: loading grbl widget');
-            var queryString = document.location.search;
-            if (queryString.indexOf('?') === 0) {
-                queryString = queryString.substr(1);
-            }
-            var parts = queryString.split('&');
-            var queryDictionary = {};
-            for (var i = 0; i < parts.length; i++) {
-                var p = parts[i];
-                var keyValuePair = p.split('=');
-                var key = keyValuePair[0];
-                var value = keyValuePair[1];
-                value = decodeURIComponent(value);
-                value = value.replace(/\+/g, ' ');
-                queryDictionary[key] = value;
-            }
-            var grblWidgetUrl = '';
-            if (queryDictionary['jDebug'] != 'undefined' && queryDictionary['jDebug'] == 1) {
-                grblWidgetUrl = "../grbl1-test-widget/master/auto-generated-widget.html"
-            }
-            else {
-                grblWidgetUrl = "../grbl1-test-widget/62452538a02a3b9ac34c0ed842781f98760fef97/auto-generated-widget.html";
-            }
+            // var queryString = document.location.search;
+            // if (queryString.indexOf('?') === 0) {
+            //     queryString = queryString.substr(1);
+            // }
+            // var parts = queryString.split('&');
+            // var queryDictionary = {};
+            // for (var i = 0; i < parts.length; i++) {
+            //     var p = parts[i];
+            //     var keyValuePair = p.split('=');
+            //     var key = keyValuePair[0];
+            //     var value = keyValuePair[1];
+            //     value = decodeURIComponent(value);
+            //     value = value.replace(/\+/g, ' ');
+            //     queryDictionary[key] = value;
+            // }
+            // var grblWidgetUrl = '';
+            // if (queryDictionary['jDebug'] != 'undefined' && queryDictionary['jDebug'] == 1) {
+            //     grblWidgetUrl = "../grbl1-test-widget/master/auto-generated-widget.html"
+            // }
+            // else {
+            //     grblWidgetUrl = "../grbl1-test-widget/62452538a02a3b9ac34c0ed842781f98760fef97/auto-generated-widget.html";
+            // }
             chilipeppr.load(
                 "#com-chilipeppr-widget-grbl-instance",
-                "../grbl1-widget/master/auto-generated-widget.html",
+                "https://raw.githubusercontent.com/rixnco/grbl1-widget/master/auto-generated-widget.html",
                 function() {
                     cprequire(
-                        ["inline:com-chilipeppr-widget-grbl"], //"inline:com-chilipeppr-widget-spconsole"],
-                        //, "inline:com-chilipeppr-serialport-spselector"],
-
-                        function(grbl) { //,spconsole) {
+                        ["inline:com-chilipeppr-widget-grbl"], 
+                        function(grbl) { 
 
                             grbl.init();
 
                         });
                 });
 
-            /*
-            // WebRTC Client com-chilipeppr-webrtcclient
-            chilipeppr.load(
-                "com-chilipeppr-webrtcclient",
-                "http://fiddle.jshell.net/chilipeppr/qWj4f/show/light/",
-
-                function() {
-                    cprequire(
-                        ["inline:com-chilipeppr-widget-webrtc-client"],
-
-                        function(webrtcclient) {
-                            webrtcclient.init();
-                        });
-                });
-                */
-
             // Serial Port Selector
-            // http://jsfiddle.net/chilipeppr/vetj5fvx/
             console.log('WORKSPACE: loading serialport selector');
             chilipeppr.load("com-chilipeppr-serialport-spselector",
-                //"http://fiddle.jshell.net/chilipeppr/vetj5fvx/show/light/",
-                "..//widget-spjs/master/auto-generated-widget.html",
+                "https://raw.githubusercontent.com/rixnco/widget-spjs/master/auto-generated-widget.html",
 
 
                 function() {
                     cprequire(
                         ["inline:com-chilipeppr-widget-serialport"],
-
-
                         function(sp) {
                             sp.setSingleSelectMode();
                             //sp.init("192.168.1.7");
@@ -1370,8 +1237,6 @@ cpdefine("inline:com-chilipeppr-workspace-rix", ["chilipeppr_ready"], function()
                                 bufferEncouragementMsg: 'For your device please choose the "grbl" buffer in the pulldown and a 115200 baud rate before connecting.'
                             };
                             sp.init(params);
-                            //$('.com-chilipeppr-widget-serialport-console').removeClass("hidden");
-                            //$('.com-chilipeppr-widget-serialport-status').removeClass("hidden");
                         });
                 });
 
