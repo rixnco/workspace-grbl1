@@ -3,6 +3,18 @@ cprequire_test(["inline:com-chilipeppr-workspace-rix"], function(ws) {
 
     console.log("initting workspace");
 
+    // overload get routine in jquery for chilipeppr.local
+    var oldAjax = $.ajax;
+    $.ajax = function() {
+    // set to local directory if location == chilipeppr.local
+    // ------------------------------------------------------
+    var url = arguments[0].url;
+    arguments[0].url = window.replaceToLocal(url);
+    
+    return oldAjax.apply($, arguments);
+    };
+
+
     // /**
     //  * The Root workspace (when you see the ChiliPeppr Header) auto Loads the Flash 
     //  * Widget so we can show the 3 second flash messages. However, in test mode we
